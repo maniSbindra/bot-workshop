@@ -14,7 +14,8 @@
                 "NODE_ENV": "",
                 "MICROSOFT_APP_ID": "",
                 "MICROSOFT_APP_PASSWORD": "",
-                "LUIS_MODEL_URL": ""
+                "LUIS_MODEL_URL": "",
+                "LUIS_HELPDESK_MODEL_URL": ""
                 
             }
         },
@@ -22,13 +23,15 @@
             "type": "node",
             "request": "attach",
             "name": "Attach to Process",
-            "port": 5858,
             "env": {
                 "NODE_ENV": "",
                 "MICROSOFT_APP_ID": "",
                 "MICROSOFT_APP_PASSWORD": "",
-                "LUIS_MODEL_URL": ""
-            }
+                "LUIS_MODEL_URL": "",
+                "LUIS_HELPDESK_MODEL_URL": ""
+                
+            },
+            "port": 5858
         }
     ]
 }
