@@ -4,7 +4,7 @@ var restify = require('restify');
 // var connector = new builder.ConsoleConnector().listen();
 var server = restify.createServer();
 
-server.listen(process.env.PORT || 3798, function () {
+server.listen(process.env.PORT || 3899, function () {
     console.log("%s listening on %s", server.name, server.url);
 });
 
@@ -22,7 +22,7 @@ server.post('/api/messages', connector.listen());
 const LuisModelUrl = process.env.LUIS_HELPDESK_MODEL_URL;
 var recognizer = new builder.LuisRecognizer(LuisModelUrl);
 
-console.log(LuisModelUrl);
+// console.log(LuisModelUrl);
 
 // var intents = new builder.IntentDialog({ recognizers: [recognizer] })
 bot.dialog('/', new builder.IntentDialog({ recognizers: [recognizer] })
@@ -38,7 +38,7 @@ bot.dialog('/', new builder.IntentDialog({ recognizers: [recognizer] })
     ])
     .matches('Greeting', [
         function (session) {
-            session.send("Hello there.....");
+            session.send("Hello there!");
         }
     ])
     .onDefault([
