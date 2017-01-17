@@ -38,7 +38,7 @@ bot.dialog('/', new builder.IntentDialog({ recognizers: [recognizer] })
     ])
     .matches('Greeting', [
         function (session) {
-            session.send("Hello there!");
+            session.send("Hello there!!!!");
         }
     ])
     .onDefault([
